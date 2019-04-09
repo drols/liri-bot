@@ -4,7 +4,7 @@ var keys = require("./keys.js");
 var request = require("request");
 var moment = require('moment');
 var Spotify = require('node-spotify-api');
-var Spotify1 = new Spotify(keys.Keys.spotify);
+var spotify = new Spotify(keys.Keys.spotify);
 
 var input = process.argv.slice(3).join(" ");
 
@@ -37,7 +37,7 @@ if (process.argv[2] == "spotify") {
     console.log(input);
   if (!input) {input = "Overburdened";}
 
-  Spotify1.search({ type: 'track', query: input, limit: '1'}, function(err, data) {
+  spotify.search({ type: 'track', query: input, limit: '1'}, function(err, data) {
     
     if (err) {
       return console.log('Error occurred: ' + err);

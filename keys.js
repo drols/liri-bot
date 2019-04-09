@@ -5,4 +5,4 @@ module.exports.Keys = {
   }
 };
 
-console.log('this is loaded');
+console.log('Spotify key has loaded');
